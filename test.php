@@ -1,19 +1,15 @@
-<!doctype html>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>add number</title>
-</head>
-<body>
-	<form action="first class prc.php" method="post" enctype="multipart/form-data">
-		
-	    <input type="file" name="img">
-		<input type="submit" name="submit" value="Save">
-		
+<?php
 
+$servername = "localhost";
+$username = "root";
+$password = "";
 
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=first sql", $username, $password);
+  echo "Connected successfully";
 
-	</form>
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
 
-</body>
-</html>
+?>
